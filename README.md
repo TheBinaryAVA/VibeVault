@@ -120,7 +120,7 @@ The project helps users discover books according to their emotions, making readi
 
 ---
 
-# ❤️ Developed Using
+# Developed Using
 - Node.js  
 - Express.js  
 - HTML5  
