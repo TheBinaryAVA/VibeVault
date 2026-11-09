@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mood Book Suggester</title>
+<meta name="description" content="Tell us how you feel and get book recommendations that match your mood.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="brand">Mood Book Suggester</span>
+  <button id="theme" class="ghost" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>How are you feeling today?</h1>
+    <p class="sub">Type a mood, say it out loud, or pick a spine from the shelf.</p>
+    <div class="ask">
+      <input id="text" type="text" maxlength="300" placeholder="e.g. tired but hopeful, or something cozy for a rainy night" aria-label="Describe your mood">
+      <button id="mic" class="ghost" aria-label="Speak your mood" title="Speak your mood">🎤</button>
+      <select id="genre" aria-label="Filter by genre"><option>All</option></select>
+      <button id="go" class="primary">Find my books</button>
+    </div>
+    <div id="shelf" class="shelf" role="list" aria-label="Moods"></div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button data-tab="results" class="on" role="tab">Recommendations</button>
+    <button data-tab="favs" role="tab">Favorites <span id="favCount"></span></button>
+    <button data-tab="history" role="tab">Mood history</button>
+    <input id="search" type="search" placeholder="Search title, author, genre" aria-label="Search books">
+  </nav>
+
+  <p id="status" role="status"></p>
+  <section id="results" class="grid"></section>
+</main>
+
+<footer>Built with Node.js, Express and vanilla JavaScript. Covers from Google Books.</footer>
+<script src="app.js"></script>
+</body>
+</html>

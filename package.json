@@ -1,0 +1,9 @@
+{
+  "name": "mood-based-book-suggester",
+  "version": "1.0.0",
+  "description": "Recommends books based on your mood. Express + vanilla JS, ready for Vercel.",
+  "main": "api/index.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2" }
+}
